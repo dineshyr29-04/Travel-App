@@ -1,7 +1,4 @@
-/**
- * Expo Configuration
- * Configure app metadata, plugins, and build settings
- */
+
 {
   "expo": {
     "name": "TravelSathi",
