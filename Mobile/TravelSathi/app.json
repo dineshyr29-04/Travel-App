@@ -1,0 +1,50 @@
+/**
+ * Expo Configuration
+ * Configure app metadata, plugins, and build settings
+ */
+{
+  "expo": {
+    "name": "TravelSathi",
+    "slug": "travelsathi",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1e90ff"
+    },
+    "iOS": {
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.travelsathi.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1e90ff"
+      },
+      "package": "com.travelsathi.app",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "13.0"
+          },
+          "android": {
+            "targetSdkVersion": 34
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "tsconfigPaths": true
+    }
+  }
+}
