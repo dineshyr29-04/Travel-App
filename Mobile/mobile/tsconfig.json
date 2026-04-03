@@ -16,6 +16,7 @@
     "sourceMap": true,
     "outDir": "./dist",
     "rootDir": "./",
+    "baseUrl": ".",
     "removeComments": true,
     "strict": true,
     "esModuleInterop": true,

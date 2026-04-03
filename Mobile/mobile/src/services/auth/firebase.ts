@@ -70,7 +70,7 @@ const firebaseAuthService: FirebaseAuthService = {
     // TODO: Implement Firebase password reset
     // return sendPasswordResetEmail(auth, email);
     void email;
-    return null;
+    return;
   },
 };
 
