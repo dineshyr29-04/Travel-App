@@ -28,7 +28,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <StatusBar barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'} />
+      <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
       <RootNavigator />
     </Provider>
   );

@@ -7,12 +7,11 @@ import axios, {
   AxiosInstance,
   AxiosRequestConfig,
   AxiosError,
-  AxiosResponse,
 } from 'axios';
 import envConfig from '../../config/env';
 import logger from '../../utils/logger';
 import { API_TIMEOUT, MAX_RETRIES, RETRY_DELAY } from '../../constants';
-import { ApiResponse, ApiError } from '../../types';
+import { ApiError } from '../../types';
 
 /**
  * API Client class

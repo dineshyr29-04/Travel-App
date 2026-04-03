@@ -43,6 +43,10 @@ const firebaseAuthService: FirebaseAuthService = {
   login: async (email: string, password: string) => {
     // TODO: Implement Firebase login
     // return signInWithEmailAndPassword(auth, email, password);
+    // mark params as used until implementation is added
+    void email;
+    void password;
+    return null;
   },
 
   signup: async (email: string, password: string, displayName: string) => {
@@ -50,6 +54,11 @@ const firebaseAuthService: FirebaseAuthService = {
     // const result = await createUserWithEmailAndPassword(auth, email, password);
     // await updateProfile(result.user, { displayName });
     // return result;
+    // mark params as used until implementation is added
+    void email;
+    void password;
+    void displayName;
+    return null;
   },
 
   logout: async () => {
@@ -60,6 +69,8 @@ const firebaseAuthService: FirebaseAuthService = {
   resetPassword: async (email: string) => {
     // TODO: Implement Firebase password reset
     // return sendPasswordResetEmail(auth, email);
+    void email;
+    return null;
   },
 };
 

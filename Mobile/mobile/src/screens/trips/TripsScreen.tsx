@@ -12,13 +12,12 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { useAppDispatch, useAppSelector } from '../../hooks/useRedux';
-import { tripsAPI } from '../../services/api/endpoints';
-import { setTrips, setLoading } from '../../store/slices/tripSlice';
+import { setLoading } from '../../store/slices/tripSlice';
 import logger from '../../utils/logger';
 
 const TripsScreen = () => {
   const dispatch = useAppDispatch();
-  const { trips, isLoading } = useAppSelector((state) => state.trips);
+  const { trips } = useAppSelector((state) => state.trips);
   const { theme } = useAppSelector((state) => state.app);
 
   const isDark = theme === 'dark';
