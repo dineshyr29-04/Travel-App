@@ -1,7 +1,4 @@
-/**
- * TypeScript Configuration
- * Strict mode with path aliases for cleaner imports
- */
+
 {
   "compilerOptions": {
     "target": "ES2020",
