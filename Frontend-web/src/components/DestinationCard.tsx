@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Star, MapPin, ArrowUpRight } from "lucide-react";
+import { Star, MapPin, ArrowUpRight } from "./Icons";
 import { motion } from "framer-motion";
 
 interface DestinationCardProps {

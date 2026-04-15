@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Search, Menu, X, Compass, User } from "lucide-react";
+import { Search, Menu, X, Compass, User } from "./Icons";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {

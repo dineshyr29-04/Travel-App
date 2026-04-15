@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import DestinationCard from "../components/DestinationCard";
 import Footer from "../components/Footer";
-import { ArrowRight, Globe, Shield, Zap } from "lucide-react";
+import { ArrowRight, Globe, Shield, Zap } from "../components/Icons";
 
 export default function Home() {
   const featuredDestinations = [

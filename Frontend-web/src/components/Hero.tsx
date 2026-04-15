@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Search, MapPin, Calendar, Map } from "lucide-react";
+import { Search, MapPin, Calendar, Map } from "./Icons";
 import { motion } from "framer-motion";
 
 const Hero = () => {

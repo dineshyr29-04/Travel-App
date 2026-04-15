@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Compass, Facebook, Instagram, Twitter, Youtube, Mail } from "lucide-react";
+import { Compass, Facebook, Instagram, Mail, Globe } from "./Icons";
 
 const Footer = () => {
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
             Crafting extraordinary travel experiences for the modern explorer. From hidden gems to luxury retreats, we guide you to the world's most breathtaking places.
           </p>
           <div className="flex gap-4">
-            {[Facebook, Instagram, Twitter, Youtube].map((Icon, i) => (
+            {[Facebook, Instagram, Mail, Globe].map((Icon, i) => (
               <a 
                 key={i} 
                 href="#" 
