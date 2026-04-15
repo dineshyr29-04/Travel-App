@@ -19,54 +19,56 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         isScrolled 
-          ? "bg-white/80 backdrop-blur-lg shadow-sm py-4" 
-          : "bg-transparent py-6"
+          ? "bg-white/70 backdrop-blur-2xl border-b border-slate-100/50 py-4 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]" 
+          : "bg-transparent py-8"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:rotate-12 transition-transform duration-300">
-            <Compass size={24} />
+        <Link href="/" className="flex items-center gap-3 group relative z-[60]">
+          <div className="w-10 h-10 bg-slate-950 rounded-full flex items-center justify-center text-white shadow-2xl group-hover:rotate-[360deg] transition-all duration-700">
+            <Compass size={22} strokeWidth={2.5} />
           </div>
-          <span className={`text-2xl font-bold font-outfit ${isScrolled ? "text-slate-900" : "text-slate-900"}`}>
-            SkyBound
+          <span className={`text-2xl font-black font-outfit tracking-tight transition-colors duration-500 ${isScrolled ? "text-slate-950" : "text-white"}`}>
+            TravelSathi<span className="text-blue-500">.</span>
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          {["Destinations", "Adventures", "Hotels", "Stories"].map((item) => (
+        <div className="hidden md:flex items-center gap-12 bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-white/10">
+          {["Explore", "AI Planner", "Localites", "Stories"].map((item) => (
             <Link
               key={item}
-              href={`/${item.toLowerCase()}`}
-              className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-                isScrolled ? "text-slate-600" : "text-slate-700"
+              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              className={`text-sm font-bold uppercase tracking-widest transition-all hover:text-blue-500 relative group ${
+                isScrolled ? "text-slate-900" : "text-white"
               }`}
             >
               {item}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
             </Link>
           ))}
         </div>
 
         {/* Actions */}
         <div className="flex items-center gap-4">
-          <button className={`p-2 rounded-full hover:bg-slate-100 transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
-            <Search size={20} />
+          <button className={`p-3 rounded-2xl hover:bg-slate-100/10 backdrop-blur-3xl transition-all ${isScrolled ? "text-slate-950" : "text-white"}`}>
+            <Search size={22} strokeWidth={2.5} />
           </button>
-          <button className="hidden md:flex items-center gap-2 bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-600 transition-all duration-300 shadow-md">
-            <User size={18} />
-            <span>Sign In</span>
+          <button className={`hidden lg:flex items-center gap-2 px-8 py-3.5 rounded-[1.25rem] text-sm font-black uppercase tracking-widest active:scale-95 transition-all shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] ${
+             isScrolled ? "bg-slate-950 text-white" : "bg-white text-slate-950"
+          }`}>
+            <span>Get App</span>
           </button>
           
           {/* Mobile Menu Toggle */}
           <button 
-            className="md:hidden p-2 text-slate-900"
+            className={`md:hidden p-3 rounded-2xl ${isScrolled ? "text-slate-950 bg-slate-50" : "text-white bg-white/10"}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={26} strokeWidth={3} /> : <Menu size={26} strokeWidth={3} />}
           </button>
         </div>
       </div>

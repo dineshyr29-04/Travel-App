@@ -4,79 +4,85 @@ import { Compass, Facebook, Instagram, Mail, Globe } from "./Icons";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-slate-300 py-20">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
-        {/* Brand */}
-        <div className="col-span-1 md:col-span-1">
-          <Link href="/" className="flex items-center gap-2 mb-6">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
-              <Compass size={18} />
+    <footer className="bg-slate-950 text-slate-400 py-24 border-t border-slate-900">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+          {/* Brand */}
+          <div className="space-y-8">
+            <Link href="/" className="flex items-center gap-2">
+              <div className="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-xl">
+                <Compass size={18} />
+              </div>
+              <span className="text-2xl font-bold font-outfit text-white tracking-tight">
+                TravelSathi
+              </span>
+            </Link>
+            <p className="text-sm leading-relaxed max-w-xs">
+              The AI-first travel companion designed for the modern era. Experience the world like a local, planned to perfection.
+            </p>
+            <div className="flex gap-4">
+              {[Instagram, Twitter, Facebook, Mail].map((Icon, i) => (
+                <a 
+                  key={i} 
+                  href="#" 
+                  className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-500 border border-slate-800"
+                >
+                  <Icon size={18} />
+                </a>
+              ))}
             </div>
-            <span className="text-xl font-bold font-outfit text-white tracking-tight">
-              SkyBound
-            </span>
-          </Link>
-          <p className="text-sm leading-relaxed mb-6">
-            Crafting extraordinary travel experiences for the modern explorer. From hidden gems to luxury retreats, we guide you to the world's most breathtaking places.
-          </p>
-          <div className="flex gap-4">
-            {[Facebook, Instagram, Mail, Globe].map((Icon, i) => (
-              <a 
-                key={i} 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300"
-              >
-                <Icon size={18} />
-              </a>
-            ))}
+          </div>
+
+          {/* Product */}
+          <div className="space-y-8">
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Product</h4>
+            <ul className="space-y-4 text-sm">
+              {["AI Trip Planner", "Local Recommendations", "Smart Packing", "Mobile App", "Pricing"].map((link) => (
+                <li key={link}>
+                  <Link href="#" className="hover:text-blue-400 transition-colors inline-flex items-center group">
+                    {link}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div className="space-y-8">
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Company</h4>
+            <ul className="space-y-4 text-sm">
+              {["About Us", "Careers", "Press", "Contact", "Partners"].map((link) => (
+                <li key={link}>
+                  <Link href="#" className="hover:text-blue-400 transition-colors">{link}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Stay Updated */}
+          <div className="space-y-8">
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Stay Updated</h4>
+            <p className="text-sm">Get early access to new features and travel guides.</p>
+            <div className="relative group">
+              <input 
+                type="email" 
+                placeholder="email@travelsathi.ai"
+                className="w-full bg-slate-900/50 border border-slate-800 rounded-2xl py-4 px-5 text-sm focus:ring-2 focus:ring-blue-600 outline-none pr-14 transition-all"
+              />
+              <button className="absolute right-2 top-2 bottom-2 bg-blue-600 text-white px-3.5 rounded-xl hover:bg-blue-500 transition-all active:scale-95">
+                <ArrowRight size={18} />
+              </button>
+            </div>
           </div>
         </div>
-
-        {/* Links */}
-        <div>
-          <h4 className="text-white font-semibold mb-6">Explore</h4>
-          <ul className="space-y-4 text-sm">
-            {["Destinations", "Cruises", "Hotels", "Travel Packages", "Guides"].map((link) => (
-              <li key={link}>
-                <Link href="#" className="hover:text-blue-400 transition-colors">{link}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-white font-semibold mb-6">Support</h4>
-          <ul className="space-y-4 text-sm">
-            {["Help Center", "Safety Information", "Terms of Service", "Privacy Policy", "Contact Us"].map((link) => (
-              <li key={link}>
-                <Link href="#" className="hover:text-blue-400 transition-colors">{link}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Newsletter */}
-        <div>
-          <h4 className="text-white font-semibold mb-6">Newsletter</h4>
-          <p className="text-sm mb-4">Get travel tips and exclusive offers delivered to your inbox.</p>
-          <div className="relative">
-            <input 
-              type="email" 
-              placeholder="Your email address"
-              className="w-full bg-slate-800 border-none rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-blue-600 outline-none pr-12"
-            />
-            <button className="absolute right-2 top-2 bottom-2 bg-blue-600 text-white px-3 rounded-lg hover:bg-blue-500 transition-colors">
-              <Mail size={16} />
-            </button>
+        
+        <div className="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-medium tracking-wide">
+          <p>© 2026 TravelSathi AI Inc. Made with ❤️ for world explorers.</p>
+          <div className="flex gap-10">
+             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+             <Link href="#" className="hover:text-white transition-colors">Terms Conditions</Link>
+             <Link href="#" className="hover:text-white transition-colors">Sitemap</Link>
           </div>
-        </div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-slate-800 flex flex-col md:row justify-between items-center gap-4 text-xs">
-        <p>© 2026 SkyBound Travel. All rights reserved.</p>
-        <div className="flex gap-8">
-          <Link href="#" className="hover:text-white">Cookie Policy</Link>
-          <Link href="#" className="hover:text-white">Sitemap</Link>
         </div>
       </div>
     </footer>
